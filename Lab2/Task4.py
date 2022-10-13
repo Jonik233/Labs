@@ -24,31 +24,33 @@ class TextReader:
                 
                 
     def get_number_of_characters(self):
-        with open(self.__file_path) as file:
-            lines = file.readlines()
-              
         sum = 0
-        for line in lines:
-            sum += len(line)
-                   
-        return sum
-    
-    
-    def get_number_of_lines(self):
         with open(self.__file_path) as file:
-            lines = file.readlines()
+            line = file.readline()
+            while line:
+                sum += len(line)
+                line = file.readline()
+                
+        return sum
         
-        return len(lines)
+    def get_number_of_lines(self):
+        number_of_lines = 0        
+        with open(self.__file_path) as file:
+            line = file.readline()
+            while line:
+                number_of_lines += 1
+                line = file.readline()
+        
+        return number_of_lines
         
     def get_number_of_words(self):
-        with open(self.__file_path) as file:
-            lines = file.readlines()
-        
         number_of_words = 0
-        for line in lines:
-            words = line.split()
-            number_of_words += len(words)
-            
+        with open(self.__file_path) as file:
+            line = file.readline()
+            while line:
+                number_of_words += len(line.split())
+                line = file.readline()
+                
         return number_of_words
     
     def __str__(self):
