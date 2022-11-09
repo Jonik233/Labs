@@ -1,0 +1,1 @@
+{"events": {"Anime-fest": {"title": "Anime-fest", "tickets": {"Regular ticket": 2, "Advanced ticket": 4, "Later ticket": 1, "Student ticket": 2}, "bought_tickets": [{"id": 1, "title": "Student ticket", "price": 10.0}]}}}
