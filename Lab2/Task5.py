@@ -86,7 +86,6 @@ if __name__ == '__main__':
     group.add_student(Student("Vitaly", "Gromiako", 5, [4,4,4,4]))
     group.add_student(Student("Doctor", "Tenma", 6, [2,2,3,5]))
     group.add_student(Student("Billy", "Herrington", 7, [4,4,4,5]))
-
+ 
     for student in group.top5_students():
         print(student[0])
-        
