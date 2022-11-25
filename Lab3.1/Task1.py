@@ -33,8 +33,10 @@ class Rational:
             return Rational(numerator, denominator)
         raise TypeError
     
-    def __div__(self, other):
+    def __truediv__(self, other):
         if isinstance(other, Rational):
+            if other.numerator == 0:
+                raise ZeroDivisionError
             numerator = self.numerator * other.denominator
             denominator = self.denominator * other.numerator
             return Rational(numerator, denominator)
